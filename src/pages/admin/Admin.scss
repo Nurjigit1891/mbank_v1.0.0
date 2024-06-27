@@ -1,0 +1,123 @@
+.admin {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    
+    form {
+        margin: 0 auto;
+
+        input {
+            width: 250px;
+        }
+
+        button {
+            width: 250px;
+            margin-top: 20px;
+            padding: 5px 10px;
+            border-radius: 2px;
+            border: none;
+            background-color:#ca0202;
+            color: white;
+        }
+    }
+
+    .outputBlock {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        .write {
+
+            p {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color: green;
+                font-size: 25px;
+            }
+            
+            ol {
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 50px;
+                li {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+    }
+
+    .keys {
+        margin-top: 30px;
+        .keys-text {
+            p {
+                font-size: 25px;
+                font-weight: 700;
+                text-align: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+        }
+    
+        .block-keys {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; // добавлено для переноса элементов
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-top: 30px;
+    
+            .allKeys, .usedKeys, .available {
+                border: 1px solid black;
+                width: 33%;
+                box-sizing: border-box; // чтобы padding и border включались в ширину элемента
+    
+                ol {
+                    padding-left: 20px;
+                    padding-bottom: 20px;
+                    margin-top: 20px;
+    
+                    li {
+                        margin-top: 20px;
+                    }
+                }
+    
+                p {
+                    text-align: center;
+                    font-weight: 600;
+                }
+            }
+    
+            .allKeys .data ol li {
+                background-color: rgb(2, 171, 243);
+            }
+    
+            .available .data ol li {
+                background-color: rgb(0, 221, 0);
+            }
+    
+            .usedKeys .data ol li {
+                background-color: rgb(231, 79, 9);
+            }
+        }
+    
+        // Медиазапрос для экранов с шириной 768px и меньше
+        @media (max-width: 768px) {
+            .block-keys {
+                flex-direction: column; // изменяет направление flex-контейнера на колонку
+    
+                .allKeys, .usedKeys, .available {
+                    width: 100%; // ширина элементов 100%
+                    margin-bottom: 10px; // добавляет отступ снизу между элементами
+                }
+            }
+        }
+
+        .checks {
+            margin-top: 50px;
+            h2 {
+                text-align: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

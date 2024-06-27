@@ -17,6 +17,10 @@ const Home = () => {
     }
   }
 
+  const openCheckPage = () => {
+    navigate('/default')
+  }
+
   return (
     <div>
       <div className="home">
@@ -40,12 +44,12 @@ const Home = () => {
         </div>
 
         <div className="button-block">
-          <button onClick={() => {actionForChooseBlock(true)}}>
-            Прочитал и беру ответственность
+          <button onClick={openCheckPage}>
+            Использовать
           </button>
         </div>
 
-        <motion.div
+        {/* <motion.div
           className={statusChooseBlock ? "choose-block" : "choose-block-off"}
           style={{ display: statusChooseBlock ? 'block' : 'none' }}
         >
@@ -62,7 +66,7 @@ const Home = () => {
               Food
             </Link>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
